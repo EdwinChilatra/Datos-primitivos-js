@@ -1,5 +1,5 @@
 //     indexOf 
-// En metodo indexOf sw usa para buscar la posicion en la que se encuentra la subcadena, si encuentra la cadena retorna el indice de la primera aparicion de la cadena y si no se encuentra la subcadena retorna -1 
+// En metodo indexOf se usa para buscar la posicion en la que se encuentra la subcadena, si encuentra la cadena retorna el indice de la primera aparicion de la cadena y si no se encuentra la subcadena retorna -1 
 
 let nombre1 = "Edwin Chilatra";
 console.log(nombre1.indexOf("Edwin")); 
@@ -13,7 +13,7 @@ console.log("-------------");
 
 let nombre2 = "Edwin Chilatra";
 console.log(nombre2.lastIndexOf("Chilatra")); 
-console.log(nombre2.lastIndexOf("Uruela"));
+console.log(nombre2.lastIndexOf("Urueña"));
 console.log("-------------");
 
 // -------------------
