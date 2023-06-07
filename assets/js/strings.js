@@ -47,4 +47,5 @@ console.log(str.toUpperCase());
 console.log(str.toLowerCase());
 str = "hola";
 console.log(str[0].toUpperCase() + str[1] + str[2] + str[3]);
-console.log(str[0].toUpperCase() );
+console.log(str[0].toUpperCase());
+tredfh
