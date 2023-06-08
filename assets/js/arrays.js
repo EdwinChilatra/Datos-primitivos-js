@@ -255,6 +255,11 @@ console.log(nombresArr);
 nombresArr = nombresArr.filter(item => item != "");
 console.log(nombresArr);
 
+// join
+let nombresStr = nombresArr.join(";");
+console.log(nombresStr);
+console.log("---------------------");
+
 // Reduce / reduceRight
 
 // let value = arr.reduce(function(acumulador, item, index, arrat){
