@@ -19,7 +19,7 @@ console.log("-------------");
 // -------------------
 
 // Includes
-// El método includes en JavaScript se utiliza para determinar si una cadena incluye otra cadena como subcadena. Devuelve un valor booleano true o false según si se encuentra o no la subcadena dentro de la cadena.
+// El método includes en JavaScript se utiliza para determinar si una cadena incluye otra cadena como subcadena. Devuelve un valor booleano true o false según si se encuentra o no la subcadena dentro de la cadena. 
 
 let nombre3 = "Edwin Chilatra";
 console.log(nombre3.includes("Edwin"));  

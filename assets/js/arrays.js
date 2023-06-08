@@ -126,26 +126,172 @@ let apellido = ["Morales","Quintero"]
 let nombreCompleto = nombre.concat(apellido, "No", "Existe", "en", "la","vida real");
 console.log(nombreCompleto);
 
-// forEach (item, index, array)
+// // forEach (item, index, array)
 
-["Mateo", "Marcos", "Lucas", "Juan", "Maria", "Magdalena"].forEach ((item, index, array) => {
-    console.info(`${item} tiene el indice ${index} en ${array}`);
+// ["Mateo", "Marcos", "Lucas", "Juan", "Maria", "Magdalena"].forEach ((item, index, array) => {
+//     console.info(`${item} tiene el indice ${index} en ${array}`);
 
-});
+// });
 
 // ["Mateo", "Marcos", "Lucas", "Juan", "Maria", "Magdalena"].forEach(alert);
 
 /* indexof | lastIndexOf | includes => ¿Para que sirven? De un ejemplo para cada uno con arreglos que involucren su nombre*/
 
 
-let nombre1 =["Edwin", "Fernando", "Chilatra", "Urueña"];
-console.log(nombre1.indexOf("Edwin")); 
-console.log(nombre1.indexOf("Chilatra")); 
-console.log(nombre1.indexOf("Urueña"));
+// let nombre1 =["Edwin", "Fernando", "Chilatra", "Urueña"];
+// console.log(nombre1.indexOf("Edwin")); 
+// console.log(nombre1.indexOf("Chilatra")); 
+// console.log(nombre1.indexOf("Urueña"));
+// console.log("-------------"); 
+
+
+// let nombre2 = ["Edwin", "Fernando", "Chilatra", "Urueña"];
+// console.log(nombre2.lastIndexOf("Chilatra")); 
+// console.log(nombre2.lastIndexOf("Urueña"));
+// console.log("-------------");
+
+// let nombre3 = ["Edwin", "Fernando", "Chilatra", "Urueña"];
+// console.log(nombre3.includes("Edwin"));  
+// console.log(nombre3.includes("Urueña"));
+// console.log("-------------"); 
+
+// find
+
+let users = [
+    {id: 1, name: "Mateo"},
+    {id: 2, name: "Marcos"},
+    {id: 3, name: "Lucas"},
+    {id: 4, name: "Juan"},
+    {id: 5, name: "Mateo"},
+    {id: 6, name: "Maria"},
+
+];
+
+// let result = arr.find(function(intem, index, array) {//Cuerpo});
+
+let user = users.find(item => item.id ==3);
+
+console.log(user);
+console.log(user.name);
+
+// findIndex
+
+console.log(users.findIndex(user => user.name == "Maria"));
+console.log(users.findIndex(user => user.name == "Pedro"));
+console.log(users.findIndex(user => user.name == "Mateo"));
+
+// findLastIndex
+console.log(users.findLastIndex(user => user.name == "Mateo"));
+
+
+// filter
+// let result = arr.filter(function(intem, index, array) {//Cuerpo});
+
+let someUsers = users.filter(item => item.name == "Mateo");
+console.log(someUsers.length);
+console.log(someUsers);
+
+// forEach (item, index, array)
+
+["Mateo", "Marcos", "Lucas", "Juan", "Mateo", "Maria"].forEach ((item) => {
+    console.info(`${item}`);
+
 console.log("-------------"); 
 
+});
 
-let nombre2 = ["Edwin", "Fernando", "Chilatra", "Urueña"];
-console.log(nombre2.lastIndexOf("Chilatra")); 
-console.log(nombre2.lastIndexOf("Urueña"));
-console.log("-------------");
+someUsers.forEach(user => console.log(user.name));
+
+someUsers = users.filter(item => item.id > "Mateo");
+someUsers.forEach(user => console.log(user.name));
+
+// ----------------------------
+//     Transformar un arrat
+// ----------------------------
+
+// map
+// let result = arr.map(function(intem, index, array) {//Cuerpo});
+
+let lengths = users.map(item => item.name.length);
+console.log(lengths);
+
+let numbers = [8, 4, 15, 1, 7, 0, 2];
+
+console.log(numbers);
+let doubles = numbers.map(num => 2 * num);
+console.log(numbers);
+console.log(doubles);
+
+// sort (fn)
+
+numbers.sort();
+console.log(numbers);
+
+function compararNumeros(a, b) {
+    if (a > b) return 1;
+    if (a == b) return 0;
+    if (a < b) return -1;
+};
+
+numbers.sort(compararNumeros);
+console.log(numbers);
+
+// Reverse
+
+numbers.reverse();
+console.log(numbers);
+
+// split
+
+let nombres = `Mateo
+Marcos
+Lucas
+Juan
+`;
+
+let nombresArr = nombres.split("\n");
+console.log(nombresArr);
+
+nombresArr = nombresArr.filter(item => item != "");
+console.log(nombresArr);
+
+// Reduce / reduceRight
+
+// let value = arr.reduce(function(acumulador, item, index, arrat){
+
+// }, inicio);
+
+numbers = [23, 5, 17, 38, 24];
+
+let suma = numbers.reduce((total, num) => total + num);
+suma = numbers.reduceRight((total, num) => total + num);
+
+console.log(suma);
+
+console.log('---------------------------');
+
+console.log(typeof{});
+
+console.log(typeof[]);
+
+console.log(Array.isArray({})); // false
+console.log(Array.isArray([])); // true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
