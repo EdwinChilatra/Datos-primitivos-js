@@ -53,43 +53,45 @@ console.log(`EL tiempo Transcurrido es de ${end - date}ms`); // Mlisegundos
  * Ejemplo: hoy es 21, si ingresamos la fecha actual junto con 5, el resultado debe ser 16
  */
 
-const getDateAgo = (fecha, dias) => {
-    const nuevaFecha = new Date(fecha);
+let getDateAgo = (fecha, dias) => {
+    let nuevaFecha = new Date(fecha);
     nuevaFecha.setDate(nuevaFecha.getDate() - dias);
     return nuevaFecha.getDate();
   }
   
-  const fechaDeEjemplo = new Date();
-  console.log(getDateAgo(fechaDeEjemplo, 1)); 
-  console.log(getDateAgo(fechaDeEjemplo, 5)); 
+  let fecha  = new Date();
+  console.log(getDateAgo(fecha , 1)); 
+  console.log(getDateAgo(fecha , 5)); 
 
 /**
  * Crear una funcion que indique la cantidad de segundos transcurridos el dia de hoy
  */
 
-function segundosDelDia() {
-    let ahora = new Date();
-    let hora = ahora.getHours();
-    let minutos = ahora.getMinutes();
-    let segundos = ahora.getSeconds();
-    let segundosTotales = hora * 3600 + minutos * 60 + segundos;
-    return `Han transcurrido ${segundosTotales} segundos en el día de hoy.`;
-  }
-  
-  console.log(segundosDelDia());
+function segundosTranscurridosHoy() {
+  let actual = new Date();
+  let horas = actual.getHours();
+  let minutos = actual.getMinutes();
+  let segundos = actual.getSeconds();
+  let segundosTotales = horas * 3600 + minutos * 60 + segundos;
+  return segundosTotales; 
+}
+ 
+let segundos = segundosTranscurridosHoy();
+console.log("Los segundos transcurridos hoy son: " + segundos);
 
 /**
  *  Crear una funcion que indique la cantidad de segundos que faltan para mañana 
 */
 
-function segundosHastaManana() {
-    let ahora = new Date();
-    let hora = ahora.getHours();
-    let minutos = ahora.getMinutes();
-    let segundos = ahora.getSeconds();
-    let segundosTotales = hora * 3600 + minutos * 60 + segundos;
-    let segundosHastaMedianoche = 24 * 3600 - segundosTotales;
-    return `Faltan ${segundosHastaMedianoche} segundos para que sea mañana.`;
-  }
-  
-  console.log(segundosHastaManana());
+function segundosParaMañana() {
+  let actual = new Date();
+  let horas = actual.getHours();
+  let minutos = actual.getMinutes();
+  let segundos = actual.getSeconds();
+  let segundosTotales = horas * 3600 + minutos * 60 + segundos;
+  let segundosHastaMedianoche = 24 * 3600 - segundosTotales;
+  return segundosHastaMedianoche;
+}
+ 
+let segundosParaSerMañana = segundosParaMañana();
+console.log("Los segundos que faltan para mañana son: " + segundosParaSerMañana);
